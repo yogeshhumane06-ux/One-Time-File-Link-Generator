@@ -128,12 +128,12 @@ public class FileController {
         }
 
         // ===== FILE VIEW WRAPPER =====
-        String html =
-                "<html><body style='background:#111;color:white;text-align:center;font-family:sans-serif;'>" +
-                        "<h2>🔐 Secure One-Time File</h2>" +
-                        "<iframe src='/api/files/download/" + token + "' width='90%' height='80%' style='border:none;'></iframe>" +
-                        "<p style='color:red;'>File will expire after viewing.</p>" +
-                        "</body></html>";
+     String html =
+        "<html><body style='background:#111;color:white;text-align:center;padding-top:100px;font-family:sans-serif;'>" +
+                "<h2>🔐 Secure One-Time File</h2>" +
+                "<a href='/api/files/download/" + token + "' style='background:#4CAF50;color:white;padding:15px 25px;text-decoration:none;border-radius:5px;font-size:18px;'>Open File</a>" +
+                "<p style='color:red;margin-top:20px;'>File will expire after opening.</p>" +
+                "</body></html>";
 
         return ResponseEntity.ok()
                 .contentType(MediaType.TEXT_HTML)
@@ -168,3 +168,4 @@ public class FileController {
                 .body(new FileSystemResource(file));
     }
 }
+
