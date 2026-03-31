@@ -119,7 +119,7 @@ public class FileController {
                             "<h2>🔐 Secure Message</h2>" +
                             "<div style='background:#222;padding:30px;border-radius:10px;display:inline-block;'>" +
                             "<p style='font-size:18px;'>" + safeMessage + "</p>" +
-                            "<p style='color:red;'>This message has expired.</p>" +
+                            "<p style='color:red;'>This message will expire after read.</p>" +
                             "</div></body></html>";
 
             return ResponseEntity.ok()
